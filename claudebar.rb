@@ -5,20 +5,20 @@
 class Claudebar < Formula
   desc "Claude Code status bar for tmux"
   homepage "https://github.com/lableaks/claudebar"
-  version "0.1.0"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/LabLeaks/claudebar/releases/download/v0.1.0/claudebar_0.1.0_darwin_amd64.tar.gz"
-      sha256 "b13cf8cb36145c2459d1e9b0de7d85ba81e8fce0458769c5bee9fb745e37307c"
+      url "https://github.com/LabLeaks/claudebar/releases/download/v0.2.0/claudebar_0.2.0_darwin_amd64.tar.gz"
+      sha256 "234d06826dfa06b2e545453d178e5524300c4af5cad2740fd0b63ae9c9b1492e"
 
       define_method(:install) do
         bin.install "claudebar"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/LabLeaks/claudebar/releases/download/v0.1.0/claudebar_0.1.0_darwin_arm64.tar.gz"
-      sha256 "8c1891fe32fd6577e5f2fdc0a16d6da84732c9b923a3b915b2617bff5e5cb605"
+      url "https://github.com/LabLeaks/claudebar/releases/download/v0.2.0/claudebar_0.2.0_darwin_arm64.tar.gz"
+      sha256 "b4e162ffb1e4f317ae3c66338cc1af547eebe1acdd173d353c1bb059a53c6e03"
 
       define_method(:install) do
         bin.install "claudebar"
@@ -28,15 +28,15 @@ class Claudebar < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/LabLeaks/claudebar/releases/download/v0.1.0/claudebar_0.1.0_linux_amd64.tar.gz"
-      sha256 "946e8c759ae0032c930b9e447648a1f07cc2a8c9524392d753b35c296dcbfef5"
+      url "https://github.com/LabLeaks/claudebar/releases/download/v0.2.0/claudebar_0.2.0_linux_amd64.tar.gz"
+      sha256 "752caf8f247f5c3f9c19cc1670d77389b615648cc4a25ae2130550ef8d3e4922"
       define_method(:install) do
         bin.install "claudebar"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/LabLeaks/claudebar/releases/download/v0.1.0/claudebar_0.1.0_linux_arm64.tar.gz"
-      sha256 "01176fa31a4a084bddc3654f45a4da574112bf7a9c00551ed639c436c259b462"
+      url "https://github.com/LabLeaks/claudebar/releases/download/v0.2.0/claudebar_0.2.0_linux_arm64.tar.gz"
+      sha256 "402c6442a3e20a595b2151be581051ec98bf16ba460c1f593e660d3c4be45ea5"
       define_method(:install) do
         bin.install "claudebar"
       end
