@@ -4,12 +4,12 @@
 class Special < Formula
   desc "Repo-native semantic spec tool"
   homepage "https://github.com/LabLeaks/special"
-  version "0.1.0"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/LabLeaks/special/releases/download/v0.1.0/special-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "c6eb6dfb034377ff8fe68dcc364bf45c12244d41bd0f5b3f89f4d77fff00d238"
+      url "https://github.com/LabLeaks/special/releases/download/v0.2.0/special-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "53302930bda299d12ecc115a5daac6485193bac8385460081b129b9dd80014eb"
 
       define_method(:install) do
         bin.install "special"
@@ -17,8 +17,8 @@ class Special < Formula
     end
 
     if Hardware::CPU.arm?
-      url "https://github.com/LabLeaks/special/releases/download/v0.1.0/special-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "59e394b6bef3bf1eba7577bca1755a740de74e7c06a873c34a1e76645dca802f"
+      url "https://github.com/LabLeaks/special/releases/download/v0.2.0/special-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "e99b1901a84cd15ed50aa4d9600fdaef4f72cf3361520eb5b7330959e72ca9c5"
 
       define_method(:install) do
         bin.install "special"
@@ -28,8 +28,8 @@ class Special < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/LabLeaks/special/releases/download/v0.1.0/special-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "8b91107cb8046c6ad4363a3aa0318bc5b2e79d1fc559ca45206fb11e832ffb72"
+      url "https://github.com/LabLeaks/special/releases/download/v0.2.0/special-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "9960997f71db16839b714aac0473b564b87abd89be92d2345178f47e021cc961"
 
       define_method(:install) do
         bin.install "special"
@@ -37,8 +37,8 @@ class Special < Formula
     end
 
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/LabLeaks/special/releases/download/v0.1.0/special-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "ee13029812c4bc6beb59eb2b3733a8894a47b0e49416da0fe1309ac803cf136e"
+      url "https://github.com/LabLeaks/special/releases/download/v0.2.0/special-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "d4e58bc4d0e0d3bd1cd019bd8df747e418718713873320effe2c5387adf92d50"
 
       define_method(:install) do
         bin.install "special"
