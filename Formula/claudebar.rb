@@ -8,39 +8,29 @@ class Claudebar < Formula
   version "0.2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
+    on_intel do
       url "https://github.com/LabLeaks/claudebar/releases/download/v0.2.0/claudebar_0.2.0_darwin_amd64.tar.gz"
       sha256 "234d06826dfa06b2e545453d178e5524300c4af5cad2740fd0b63ae9c9b1492e"
-
-      define_method(:install) do
-        bin.install "claudebar"
-      end
     end
-    if Hardware::CPU.arm?
+    on_arm do
       url "https://github.com/LabLeaks/claudebar/releases/download/v0.2.0/claudebar_0.2.0_darwin_arm64.tar.gz"
       sha256 "b4e162ffb1e4f317ae3c66338cc1af547eebe1acdd173d353c1bb059a53c6e03"
-
-      define_method(:install) do
-        bin.install "claudebar"
-      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+    on_intel do
       url "https://github.com/LabLeaks/claudebar/releases/download/v0.2.0/claudebar_0.2.0_linux_amd64.tar.gz"
       sha256 "752caf8f247f5c3f9c19cc1670d77389b615648cc4a25ae2130550ef8d3e4922"
-      define_method(:install) do
-        bin.install "claudebar"
-      end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+    on_arm do
       url "https://github.com/LabLeaks/claudebar/releases/download/v0.2.0/claudebar_0.2.0_linux_arm64.tar.gz"
       sha256 "402c6442a3e20a595b2151be581051ec98bf16ba460c1f593e660d3c4be45ea5"
-      define_method(:install) do
-        bin.install "claudebar"
-      end
     end
+  end
+
+  def install
+    bin.install "claudebar"
   end
 
   test do
