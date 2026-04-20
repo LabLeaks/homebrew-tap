@@ -4,7 +4,7 @@
 class Special < Formula
   desc "Repo-native semantic spec tool"
   homepage "https://github.com/LabLeaks/special"
-  version "0.5.0"
+  version "0.6.0"
 
   archive = on_system_conditional(
     macos: on_arch_conditional(
@@ -16,15 +16,15 @@ class Special < Formula
       intel: "special-cli-x86_64-unknown-linux-gnu.tar.xz",
     ),
   )
-  url "https://github.com/LabLeaks/special/releases/download/v0.5.0/#{archive}"
+  url "https://github.com/LabLeaks/special/releases/download/v0.6.0/#{archive}"
   sha256 on_system_conditional(
     macos: on_arch_conditional(
-      arm: "dde730ddddd77c40087753af15cc95959c6410f0c7d38ec7d9678dd37daed474",
-      intel: "2f10965ba647ac9ac3747057c95c646a218a2f31cd2d17fe837502196f4094e8",
+      arm: "d69f0e3b8378335d9b7ab5259b36b4d0d79c731be4020321441143185f7402ba",
+      intel: "02a29faf85e50df78184a6f5fbbd1addc71c10bcc41f81c594a6f3a0690bc55e",
     ),
     linux: on_arch_conditional(
-      arm: "a1c331a0d468955e0af5d4f1a3af45543a6d26d91d70d449ae0aa7fd3ea55fed",
-      intel: "3decaa3f212444e16da4d3984eacdd4ca19830c1d180b5f7f87059c3c83bf950",
+      arm: "5b0dc79c6903060e8cb9cd155bab4079f40568050c5a7db3757dbb3640b95b23",
+      intel: "274ac51c9f32797218fd1a660d6265f1abdfc0db06e4e24ca920451587e9e40a",
     ),
   )
 
