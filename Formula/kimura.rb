@@ -4,12 +4,12 @@
 class Kimura < Formula
   desc "Task-first workflow engine on top of jj"
   homepage "https://github.com/LabLeaks/kimura"
-  version "0.1.0"
+  version "0.2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/LabLeaks/kimura/releases/download/v0.1.0/kimura-x86_64-apple-darwin.tar.xz"
-      sha256 "882314b6fc2733b3ea74434b14c1322935da7516149ed00eddc3636eed094a67"
+      url "https://github.com/LabLeaks/kimura/releases/download/v0.2.0/kimura-x86_64-apple-darwin.tar.xz"
+      sha256 "e0c912cc8dc4cbd60106b802876af482071a62f847bdc6cf764aec7cffca371d"
 
       define_method(:install) do
         bin.install "kimura"
@@ -17,8 +17,8 @@ class Kimura < Formula
     end
 
     if Hardware::CPU.arm?
-      url "https://github.com/LabLeaks/kimura/releases/download/v0.1.0/kimura-aarch64-apple-darwin.tar.xz"
-      sha256 "b19815ca30937f2e168d107122c0745d13fc832a01dc3bc218110712be1aefb1"
+      url "https://github.com/LabLeaks/kimura/releases/download/v0.2.0/kimura-aarch64-apple-darwin.tar.xz"
+      sha256 "06e863640ba675100a90b83c21c5931b338f149fb09b479685f6ece558624f4b"
 
       define_method(:install) do
         bin.install "kimura"
@@ -28,8 +28,8 @@ class Kimura < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/LabLeaks/kimura/releases/download/v0.1.0/kimura-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "7b295fba5b1ad3b00ce78ea2d4b4cb013789af9b88a9e1573077183fa55a3757"
+      url "https://github.com/LabLeaks/kimura/releases/download/v0.2.0/kimura-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "7e40ad75f8fa1c7cbf88dcece75929646e6e0b2083fcfc4bd2b586603b887619"
 
       define_method(:install) do
         bin.install "kimura"
@@ -37,8 +37,8 @@ class Kimura < Formula
     end
 
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/LabLeaks/kimura/releases/download/v0.1.0/kimura-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "6b7e2f0c89a41e05ad365171516bbfa5d63f3d6e37da52ad111bcada3065fb5b"
+      url "https://github.com/LabLeaks/kimura/releases/download/v0.2.0/kimura-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "69f63b06e934d3c9505fc83cef64663bd62e1c67ed7db40dcfa704348db2e8f0"
 
       define_method(:install) do
         bin.install "kimura"
