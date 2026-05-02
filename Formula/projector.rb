@@ -4,7 +4,7 @@
 class Projector < Formula
   desc "Private context sync and restore CLI"
   homepage "https://github.com/LabLeaks/projector"
-  version "0.2.1"
+  version "0.2.2"
 
   archive = on_system_conditional(
     macos: on_arch_conditional(
@@ -16,15 +16,15 @@ class Projector < Formula
       intel: "projector-cli-x86_64-unknown-linux-gnu.tar.xz",
     ),
   )
-  url "https://github.com/LabLeaks/projector/releases/download/v0.2.1/#{archive}"
+  url "https://github.com/LabLeaks/projector/releases/download/v0.2.2/#{archive}"
   sha256 on_system_conditional(
     macos: on_arch_conditional(
-      arm: "d4b8b4e2d429b47e5317aa42319af226f6989bd1030382bd4ee280981199055c",
-      intel: "1c10bd6d84261201146efc8ec4ebe5a7a4b2606c1b4bf358d46545644ffde443",
+      arm: "7c251b408b11bdb0023a0bb84eb9d803e2fecf99c082d29eb8b0587782834447",
+      intel: "8849bde77c8ec39446506f13b09479bb72676a74d191ce1bc570c2437ef11ac6",
     ),
     linux: on_arch_conditional(
-      arm: "815b96521225853db7039ecc9e44beba04dec94d1d8a0e184bec84bcfee0d39f",
-      intel: "346b52c30e4741f3b76be20ac77be3c5b54fb9e29c01625549099a79f2439112",
+      arm: "ce0f4badf3a9cf2da086249bedd4076d65b2b31b918af3f938c9ddfc322b45ee",
+      intel: "b62e336b772bfd30833985f9e13bdb21a1d449e671049b9f719e504f9e3fb67c",
     ),
   )
 
